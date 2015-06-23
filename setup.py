@@ -61,6 +61,9 @@ if __name__ == "__main__":
         )
     ]
 
+    library_path='/usr/local/Cellar/graphviz/2.38.0/lib'
+    include_path='/usr/local/Cellar/graphviz/2.38.0/include/graphviz'
+
     setup(
         name=release.name,
         version=release.version,
@@ -77,6 +80,7 @@ if __name__ == "__main__":
         packages=packages,
         data_files=data,
         ext_modules=extension,
+
         cmdclass={
             'install': AddExtensionInstallCommand,
             'develop': AddExtensionDevelopCommand,
