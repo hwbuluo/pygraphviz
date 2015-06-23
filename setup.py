@@ -54,15 +54,12 @@ if __name__ == "__main__":
         Extension(
             "pygraphviz._graphviz",
             ["pygraphviz/graphviz_wrap.c"],
-            include_dirs=[],
-            library_dirs=[],
+            include_dirs=['/usr/local/Cellar/graphviz/2.38.0/include/graphviz'],
+            library_dirs=['/usr/local/Cellar/graphviz/2.38.0/lib'],
             libraries=["cgraph", "cdt"],
             define_macros=define_macros
         )
     ]
-
-    library_path='/usr/local/Cellar/graphviz/2.38.0/lib'
-    include_path='/usr/local/Cellar/graphviz/2.38.0/include/graphviz'
 
     setup(
         name=release.name,
